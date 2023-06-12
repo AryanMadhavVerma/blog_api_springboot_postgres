@@ -1,34 +1,24 @@
-package com.blog_api.blog_api.entities;
+package com.aryan.blogapi.entities;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 
 @Entity
-@Table(name = "blog_post")
+@Table(name = "blog_posts")
 public class BlogPost {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Column(nullable = false)
     private String title;
 
+    @Column(nullable = false)
     private String content;
 
-    //we define a relation between the user and blog posts. A single author can have multiple 
-    //blog posts, but a single blog post has just one author.
-    @ManyToOne
-    @JoinColumn(name = "user_id")
+    @ManyToOne()
+    @JoinColumn(name = "user_name", nullable = false)
     private User user;
-
-    public BlogPost() {
-        super();
-    }
-
-    public BlogPost(String title, String content, User user) {
-        this.title = title;
-        this.content = content;
-        this.user = user;
-
-    }
 
     public Long getId() {
         return id;
@@ -64,5 +54,5 @@ public class BlogPost {
 
     
 
-
 }
+

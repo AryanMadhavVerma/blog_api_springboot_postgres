@@ -1,16 +1,9 @@
-package com.blog_api.blog_api;
+package com.aryan.blogapi;
 
 import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-
-
-
-@SpringBootApplication(scanBasePackages = {"services","controller","dao"})
-
-
-
+@SpringBootApplication
 public class BlogApiApplication {
 
 	public static void main(String[] args) {
