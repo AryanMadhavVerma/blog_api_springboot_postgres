@@ -20,6 +20,17 @@ public class BlogPost {
     @JoinColumn(name = "user_name", nullable = false)
     private User user;
 
+    public BlogPost() {
+        
+    }
+
+    public BlogPost(long id, String title, String content, User user) {
+        this.id = id;
+        this.title = title;
+        this.content = content;
+        this.user = user;
+    }
+
     public Long getId() {
         return id;
     }

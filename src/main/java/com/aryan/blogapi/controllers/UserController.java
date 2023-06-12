@@ -8,7 +8,6 @@ import com.aryan.blogapi.repositories.UserRepository;
 import com.aryan.blogapi.entities.User;
 
 import java.util.List;
-import java.util.Optional;
 
 //to create and check the current users of blog api
 @RestController
